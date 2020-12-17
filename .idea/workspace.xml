@@ -2,18 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="560df47e-55d6-4c91-8158-fe588d1ef0ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data/apis/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/episodes/actions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/episodes/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/episodes/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/episodes/types/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/showInfo/actions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/showInfo/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/showInfo/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/episode/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/show/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/episode/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/show/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/actions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/constants/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/selectors/episodes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/selectors/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/selectors/show/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/types/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/apis/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/axios/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/episodes/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/actions/episodes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/episodes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/episodes/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/reducers/episodes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/episodes/types/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/showInfo/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/actions/show/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/showInfo/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/showInfo/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/reducers/show/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -66,21 +81,23 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/data/showInfo/actions" />
-      <recent name="$PROJECT_DIR$/src/data/showInfo/reducers" />
-      <recent name="$PROJECT_DIR$/src/data/episodes/actions" />
-      <recent name="$PROJECT_DIR$/src/data/episodes" />
-      <recent name="$PROJECT_DIR$/src/data/showInfo" />
+      <recent name="$PROJECT_DIR$/src/data/selectors/show" />
+      <recent name="$PROJECT_DIR$/src/data/reducers/show" />
+      <recent name="$PROJECT_DIR$/src/data/actions/show" />
+      <recent name="$PROJECT_DIR$/src/data/reducers/episode" />
+      <recent name="$PROJECT_DIR$/src/data/actions/episode" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,17 +121,11 @@
       <workItem from="1608137397341" duration="751000" />
       <workItem from="1608138753791" duration="532000" />
       <workItem from="1608140967046" duration="6940000" />
+      <workItem from="1608232115233" duration="9104000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="-1222" y="291" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608147419485">
-      <screen x="-1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="-1222" y="291" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1080/-3840.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1608147419485" />
-    <state x="-1222" y="291" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1080/-3840.25.1920.1055/0.25.1680.1025@-1920.0.1920.1080" timestamp="1608147006118" />
   </component>
 </project>
