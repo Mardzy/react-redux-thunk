@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="560df47e-55d6-4c91-8158-fe588d1ef0ce" name="Default Changelist" comment="" />
+    <list default="true" id="560df47e-55d6-4c91-8158-fe588d1ef0ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/data/apis/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/episodes/actions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/episodes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/episodes/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/episodes/types/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/showInfo/actions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/showInfo/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/showInfo/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +25,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -32,6 +48,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -43,7 +60,18 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data/showInfo/actions" />
+      <recent name="$PROJECT_DIR$/src/data/showInfo/reducers" />
+      <recent name="$PROJECT_DIR$/src/data/episodes/actions" />
+      <recent name="$PROJECT_DIR$/src/data/episodes" />
+      <recent name="$PROJECT_DIR$/src/data/showInfo" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -74,6 +102,8 @@
       <workItem from="1578223457771" duration="2220000" />
       <workItem from="1578303729617" duration="4000" />
       <workItem from="1608137397341" duration="751000" />
+      <workItem from="1608138753791" duration="532000" />
+      <workItem from="1608140967046" duration="6940000" />
     </task>
     <servers />
   </component>
@@ -81,13 +111,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1272" y="283" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1578223425449">
+    <state x="-1222" y="291" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608147419485">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1272" y="283" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-3840.23.1920.1057/-1920.0.1920.1080/0.23.1680.1027@-1920.0.1920.1080" timestamp="1578223425449" />
-    <state x="-1222" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576323758727">
-      <screen x="-1920" y="23" width="1920" height="1057" />
-    </state>
-    <state x="-1222" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1576323758727" />
+    <state x="-1222" y="291" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1080/-3840.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1608147419485" />
+    <state x="-1222" y="291" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1080/-3840.25.1920.1055/0.25.1680.1025@-1920.0.1920.1080" timestamp="1608147006118" />
   </component>
 </project>
