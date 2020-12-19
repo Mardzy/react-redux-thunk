@@ -1,5 +1,13 @@
-import { connect } from "react-redux";
-import Routes from "./routes"
+import React from "react";
 
-export default () =>
-  <Routes />;
+import Routes from "./routes";
+
+import { NavBar } from "./components";
+
+const App = () =>
+  <div>
+    <NavBar />
+    <Routes />;
+  </div>
+
+export default App;
