@@ -3,8 +3,8 @@ import React from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { AppBar, Breadcrumbs, Link, Toolbar, Typography } from "@material-ui/core";
 
-import { routes } from "../../routes"
-
+import { routes } from "../../config"
+const { index :{ name, path }, episode } = routes
 
 const NavBar = () => {
   const handleClick = (e) => {
@@ -13,10 +13,9 @@ const NavBar = () => {
   }
 
   return (
-    <AppBar>
+    <AppBar position="sticky">
       <Toolbar>
         <Breadcrumbs aria-label="breadcrumb">
-          {_.map(_.values(routes), ({ name, path }) =>
             <Link
               children={_.capitalize(name)}
               component={RouterLink}
@@ -24,8 +23,16 @@ const NavBar = () => {
               key={name}
               onClick={handleClick}
               to={path}
-            />)}
-          <Typography color="textPrimary">Breadcrumb</Typography>
+            />
+          <Link
+            children={_.capitalize(episode.name)}
+            component={RouterLink}
+            color="inherit"
+            key={episode.name}
+            onClick={handleClick}
+            to={episode.path}
+          />
+          {/*<Typography color="textPrimary">Breadcrumb</Typography>*/}
         </Breadcrumbs>
       </Toolbar>
     </AppBar>

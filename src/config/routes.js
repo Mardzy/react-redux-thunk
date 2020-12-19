@@ -1,14 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import { Episode, Show } from "./containers";
+import { routes } from "./index";
 
-export const routes = {
-  index: { name: "home", path: "/" },
-  episode: { name: "episode", path: "/episode" }
-}
+import { Episode, Show } from "../containers";
 
-const Routes = () =>
+const Router = () =>
   <>
     <Switch>
       <Route exact path={routes.index.path} component={Show} />
@@ -16,4 +13,4 @@ const Routes = () =>
     </Switch>
   </>;
 
-export default Routes;
+export default Router;
