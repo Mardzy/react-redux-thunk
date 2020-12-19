@@ -1,1 +1,2 @@
-export { fetchShowInfo } from "./show"
+export  { fetchEpisodeList } from "./episodeList";
+export { fetchShowInfo } from "./show";

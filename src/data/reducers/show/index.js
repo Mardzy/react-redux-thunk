@@ -5,7 +5,6 @@ import {
 } from "../../types";
 
 /**
- *
  * @type {{data: {}, loading: boolean, error: string|null}}
  */
 const initialState = {
@@ -15,9 +14,8 @@ const initialState = {
 }
 
 /**
- *
  * @param {{data: {}, loading: boolean, error: (string|null)}} state
- * @param {{type: string}} action
+ * @param {{type: string, payload: {}}} action
  * @return {{data: [], loading: boolean, error}|{data: {}, loading: boolean, error: (string|null)}|{data, loading:
  *   boolean, error: null}}
  */

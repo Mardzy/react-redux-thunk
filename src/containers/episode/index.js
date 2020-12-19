@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
+import { fetchEpisodeList } from "../../data/actions"
 
 import { Container } from "../../components";
 
-const Episode = ({ fetchEpisodes, showInfo }) => {
+const Episode = ({ fetchEpisodeList, showInfo }) => {
   const { data } = showInfo;
 
   useEffect(() => {
-    fetchEpisodes();
-  }, [fetchEpisodes]);
+    fetchEpisodeList();
+  }, [fetchEpisodeList]);
   console.log("episodes: ", data, Container);
   return <Container children="I'm an episode" {...showInfo} />
 }
@@ -19,7 +20,7 @@ const mapStateToProps = ({ showInfo }) =>
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchEpisodes: showId => dispatch(fetchEpisodes(showId))
+    fetchEpisodeList: showId => dispatch(fetchEpisodeList())
   }
 }
 

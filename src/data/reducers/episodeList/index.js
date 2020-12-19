@@ -1,11 +1,10 @@
 import {
-  FETCH_EPISODES_FAILED,
-  FETCH_EPISODES_PENDING,
-  FETCH_EPISODES_SUCCESS
+  FETCH_EPISODE_LIST_FAILED,
+  FETCH_EPISODE_LIST_PENDING,
+  FETCH_EPISODE_LIST_SUCCESS
 } from "../../types";
 
 /**
- *
  * @type {{data: [], loading: boolean, error: string|null}}
  */
 const initialState = {
@@ -15,26 +14,27 @@ const initialState = {
 }
 
 /**
- *
  * @param {{data: [], loading: boolean, error: (string|null)}} state
- * @param {{}} action
- * @return {{data: [], loading: boolean, error}|{data: {}, loading: boolean, error: (string|null)}|{data, loading:
- *   boolean, error: null}}
+ * @param {{type: string, payload: []}} action
+ * @return {{data: [], loading: boolean, error}|{data: {}, loading: boolean, error:
+ *   (string|null)}|{data, loading: boolean, error: null}}
  */
-export const episodesReducer = (state = initialState, action) => {
+export const episodeListReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_EPISODES_PENDING:
+    case FETCH_EPISODE_LIST_PENDING:
       return {
         ...state,
         loading: true
       }
-    case FETCH_EPISODES_SUCCESS:
+    case FETCH_EPISODE_LIST_SUCCESS:
+      console.log("payload: ", action.payload);
       return {
+        ...state,
         loading: false,
         data: action.payload,
         error: null
       }
-    case FETCH_EPISODES_FAILED:
+    case FETCH_EPISODE_LIST_FAILED:
       return {
         loading: false,
         data: [],

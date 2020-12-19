@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
 
-import { episodesReducer as episodes } from "./episodes"
+import { episodeListReducer as episodeList } from "./episodeList"
 import { showInfoReducer as showInfo } from "./show"
 
 export default combineReducers({
-  episodes,
+  episodeList,
   showInfo
 });
