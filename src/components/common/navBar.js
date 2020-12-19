@@ -13,8 +13,8 @@ const NavBar = () => {
   }
 
   return (
-    <AppBar position="sticky">
-      <Toolbar>
+    <AppBar className="navBar" position="sticky">
+      <Toolbar className="navBar-toolBar">
         <Breadcrumbs aria-label="breadcrumb">
             <Link
               children={_.capitalize(name)}
