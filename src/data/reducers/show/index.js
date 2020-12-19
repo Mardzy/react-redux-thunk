@@ -8,7 +8,7 @@ import {
  * @type {{data: {}, loading: boolean, error: string|null}}
  */
 const initialState = {
-  loading: false,
+  loading: true,
   data: {},
   error: null
 }
@@ -16,24 +16,22 @@ const initialState = {
 /**
  * @param {{data: {}, loading: boolean, error: (string|null)}} state
  * @param {{type: string, payload: {}}} action
- * @return {{data: [], loading: boolean, error}|{data: {}, loading: boolean, error: (string|null)}|{data, loading:
- *   boolean, error: null}}
+ * @return {{data: {}, loading: boolean, error: {}}}
  */
 export const showInfoReducer = (state = initialState, action ) => {
   switch (action.type) {
     case FETCH_SHOW_INFO_PENDING:
-      return {
-        ...state,
-        loading: true
-      }
+      return initialState;
     case FETCH_SHOW_INFO_SUCCESS:
       return {
+        ...state,
         loading: false,
         data: action.payload,
         error: null
       }
     case FETCH_SHOW_INFO_FAILED:
       return {
+        ...state,
         loading: false,
         data: {},
         error: action.payload

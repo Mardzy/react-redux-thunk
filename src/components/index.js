@@ -1,7 +1,11 @@
+import ErrorBoundary from "./common/errorBoundary";
 import NavBar from "./common/navBar";
-import Container from "./common/container";
+import LoadingContainer from "./common/loadingContainer";
+import ShowView from "./show";
 
 export {
-  Container,
-  NavBar
+  LoadingContainer,
+  ErrorBoundary,
+  NavBar,
+  ShowView
 }

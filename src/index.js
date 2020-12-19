@@ -1,13 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom"
 import { Provider } from "react-redux";
 
 import store from "./data/store";
 
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+
+import 'fontsource-roboto';
+import "./styles/main.scss";
 
 ReactDOM.render(
   <Provider store={store}>
@@ -17,7 +19,7 @@ ReactDOM.render(
       </Router>
     </React.StrictMode>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

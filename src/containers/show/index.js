@@ -4,23 +4,20 @@ import { connect } from "react-redux";
 import { fetchShowInfo, fetchEpisodeList } from "../../data/actions";
 import { POWER_PUFF_GIRLS_ID } from "../../data/constants";
 
-import { Container } from "../../components";
+import { LoadingContainer, ShowView } from "../../components";
 
 const Show = (props) => {
-  const { fetchEpisodeList, fetchShowInfo, episodeList: {data: list}, showInfo } = props;
-  // const { data } = showInfo;
-  console.log("episodeList: ", list);
+  const { fetchEpisodeList, fetchShowInfo, episodeList, showInfo } = props;
   useEffect(() => {
     fetchShowInfo(POWER_PUFF_GIRLS_ID);
     fetchEpisodeList();
   }, [fetchEpisodeList, fetchShowInfo]);
 
-  return <Container children="I'm a show" {...showInfo} />
+  return <LoadingContainer component={ShowView} {...showInfo} />
 }
 
 const mapStateToProps = (state) => {
-  const { episodeList, showInfo } = state
-  console.log("state: ", state);
+  const { episodeList, showInfo } = state;
   return ({ episodeList, showInfo });
 };
 

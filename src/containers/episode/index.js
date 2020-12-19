@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import { fetchEpisodeList } from "../../data/actions"
 
-import { Container } from "../../components";
+import { LoadingContainer } from "../../components";
 
 const Episode = ({ fetchEpisodeList, showInfo }) => {
   const { data } = showInfo;
@@ -11,8 +11,8 @@ const Episode = ({ fetchEpisodeList, showInfo }) => {
   useEffect(() => {
     fetchEpisodeList();
   }, [fetchEpisodeList]);
-  console.log("episodes: ", data, Container);
-  return <Container children="I'm an episode" {...showInfo} />
+  return <div>episode</div>
+  // return <LoadingContainer component="I'm an episode" {...showInfo} />
 }
 
 const mapStateToProps = ({ showInfo }) =>

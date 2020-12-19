@@ -1,4 +1,5 @@
 export const routes = {
-  index: { name: "home", path: "/" },
-  episode: { name: "episode", path: "/episode" }
+  index: { name: "main", path: "/" },
+  episodes: { name: "episodes", path: "/episodes" },
+  episode: { name: "episode", path: "episode/:id" }
 }
