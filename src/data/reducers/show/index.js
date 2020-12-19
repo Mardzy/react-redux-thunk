@@ -6,7 +6,7 @@ import {
 
 /**
  *
- * @type {{data: {}, loading: boolean, error: string|nullw}}
+ * @type {{data: {}, loading: boolean, error: string|null}}
  */
 const initialState = {
   loading: false,
@@ -14,6 +14,13 @@ const initialState = {
   error: null
 }
 
+/**
+ *
+ * @param {{data: {}, loading: boolean, error: (string|null)}} state
+ * @param {{type: string}} action
+ * @return {{data: [], loading: boolean, error}|{data: {}, loading: boolean, error: (string|null)}|{data, loading:
+ *   boolean, error: null}}
+ */
 export const showInfoReducer = (state = initialState, action ) => {
   switch (action.type) {
     case FETCH_SHOW_INFO_PENDING:
