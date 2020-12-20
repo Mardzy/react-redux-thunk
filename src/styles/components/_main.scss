@@ -1,8 +1,32 @@
 .main {
-  margin-top: 30px;
-  .show-image {
-    height: 100px;
-    background-position: center;
-    background-position-y: center;
+  display: flex;
+  flex-direction: column;
+  .main-header {
+    margin-top: 2.5em;
+  }
+  .main-content {
+    display: flex;
+    margin-top: 1em;
+    img {
+      margin: 0 2em;
+      width: 25em;
+    }
+  }
+
+  @media screen and (max-width: 414px){
+    .main-header {
+      font-size: 2em;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        margin: 1em 0;
+        width: 65%;
+      }
+    }
   }
 }

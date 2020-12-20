@@ -1,4 +1,4 @@
-import { tvMaze } from "../axios";
+import { tvMazeEpisode } from "../axios";
 import {
   FETCH_EPISODE_FAILED,
   FETCH_EPISODE_PENDING,
@@ -15,12 +15,11 @@ export const fetchEpisodeSuccess = payload =>
 export const fetchEpisodeFailed = payload =>
   ({ type: FETCH_EPISODE_FAILED, payload })
 
-export const fetchEpisode = showId =>
+export const fetchEpisode = url =>
   async dispatch => {
-    const path = `/episodes/${showId}`
     try {
       dispatch(fetchEpisodePending);
-      const { data } = await tvMaze.get(path);
+      const { data } = await tvMazeEpisode(url);
 
       dispatch(fetchEpisodeSuccess(data));
     } catch ({ message }) {

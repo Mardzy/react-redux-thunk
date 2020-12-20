@@ -1,7 +1,16 @@
 import axios from "axios";
 
-export const tvMazeApi = "http://api.tvmaze.com";
+export const tvMazeApi = "http://api.tvmaze.com/shows/";
 
-export const tvMaze = axios.create({
+/**
+ * @type {AxiosInstance}
+ */
+export const tvMazeShows = axios.create({
   baseURL: tvMazeApi
 });
+
+/**
+ * @param {string} baseURL
+ * @return {AxiosInstance}
+ */
+export const tvMazeEpisode = baseURL => axios.get(baseURL);

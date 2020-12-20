@@ -9,7 +9,7 @@ const Episodes = ({ data, onClick }) => {
       <Typography className="episodes-accordion__item-number">
         {`${episode.number}.`}
       </Typography>
-      <Typography className="episodes-accordion__item-name" data-id={episode.id} onClick={onClick}>
+      <Typography className="episodes-accordion__item-name" data-id={episode._links.self.href} onClick={onClick}>
         {episode.name}
       </Typography>
     </AccordionDetails>
@@ -29,7 +29,7 @@ const Episodes = ({ data, onClick }) => {
 
   return (
     <Box className="episodes">
-      <Typography variant="h3">List of Episodes by Season</Typography>
+      <Typography variant="h3">Episodes by Seasons</Typography>
       {data && _.map(data, (value, key) => renderSeasons(value, key))}
     </Box>
   );

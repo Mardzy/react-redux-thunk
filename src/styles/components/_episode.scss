@@ -4,20 +4,53 @@
     justify-content: space-around;
     width: 60%;
   }
+
   .episode-content{
     margin-top: 3em;
     display: flex;
+
     img {
       height: 20em;
     }
+
     .episode-content__text {
       padding: 0.5em 1em;
       width: 40%;
+
       h5 {
         margin-bottom: 0.25em;
       }
+
       h6 {
         margin-top: 0.25em;
+      }
+    }
+  }
+
+  @media screen and (max-width: 414px){
+    display: flex;
+    flex-direction: column;
+
+    .episode-header {
+      margin-top: 5em;
+      width: 100%;
+
+      h3 {
+        font-size: 1.5em;
+      }
+    }
+
+    .episode-content {
+      flex-direction: column;
+      margin-top: 1.5em;
+      width: 100%;
+
+      img {
+        height: 12em;
+      }
+
+      .episode-content__text {
+        width: 100%;
       }
     }
   }
