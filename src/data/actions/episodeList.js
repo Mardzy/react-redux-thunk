@@ -1,11 +1,11 @@
-import { tvMaze } from "../../axios";
+import { tvMaze } from "../axios";
 
 import {
   FETCH_EPISODE_LIST_FAILED,
   FETCH_EPISODE_LIST_PENDING,
   FETCH_EPISODE_LIST_SUCCESS
-} from "../../types";
-import { POWER_PUFF_GIRLS_ID } from "../../constants";
+} from "../types";
+import { POWER_PUFF_GIRLS_ID } from "../constants";
 
 /**
  * @type {{type: string}}

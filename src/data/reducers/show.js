@@ -2,7 +2,7 @@ import {
   FETCH_SHOW_INFO_FAILED,
   FETCH_SHOW_INFO_PENDING,
   FETCH_SHOW_INFO_SUCCESS
-} from "../../types";
+} from "../types";
 
 /**
  * @type {{data: {}, loading: boolean, error: string|null}}
@@ -19,10 +19,8 @@ const initialState = {
  * @return {{data: {}, loading: boolean, error: {}}}
  */
 export const showInfoReducer = (state = initialState, action ) => {
-  console.log("type: ", action.type);
   switch (action.type) {
     case FETCH_SHOW_INFO_PENDING:
-      console.log("reducer pending: ");
       return {
         loading: true,
         data: {},

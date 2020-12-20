@@ -1,13 +1,9 @@
 .loadingContainer {
-
-  .loadingContainer-box {
     height: inherit;
     align-items: center;
     justify-content: center;
 
-    .loadingContainer-box__text {
+    .loadingContainer-text {
       padding: 0.5em;
     }
-
-  }
 }

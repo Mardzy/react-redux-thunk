@@ -6,10 +6,8 @@ import { AppBar, Breadcrumbs, Link, Toolbar, Typography } from "@material-ui/cor
 import { routes } from "../../config"
 const { index :{ name, path }, episodes } = routes
 
-const NavBar = () => {
-
-  return (
-    <AppBar className="navBar" position="sticky">
+const NavBar = () => (
+    <AppBar className="navBar" position="fixed">
       <Toolbar className="navBar-toolBar">
         <Breadcrumbs aria-label="breadcrumb">
             <Link
@@ -31,6 +29,5 @@ const NavBar = () => {
       </Toolbar>
     </AppBar>
   );
-};
 
 export default NavBar;

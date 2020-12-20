@@ -1,9 +1,9 @@
-import { tvMaze } from "../../axios";
+import { tvMaze } from "../axios";
 import {
   FETCH_SHOW_INFO_FAILED,
   FETCH_SHOW_INFO_PENDING,
   FETCH_SHOW_INFO_SUCCESS
-} from "../../types";
+} from "../types";
 
 export const fetchShowInfoPending = {
   type: FETCH_SHOW_INFO_PENDING

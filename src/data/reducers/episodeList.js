@@ -2,7 +2,7 @@ import {
   FETCH_EPISODE_LIST_FAILED,
   FETCH_EPISODE_LIST_PENDING,
   FETCH_EPISODE_LIST_SUCCESS
-} from "../../types";
+} from "../types";
 
 /**
  * @type {{data: [], loading: boolean, error: string|null}}
@@ -27,7 +27,6 @@ export const episodeListReducer = (state = initialState, action) => {
         loading: true
       }
     case FETCH_EPISODE_LIST_SUCCESS:
-      console.log("payload: ", action.payload);
       return {
         ...state,
         loading: false,

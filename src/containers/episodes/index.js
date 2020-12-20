@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
 import { fetchEpisodeList } from "../../data/actions"
+import { showIdSelector } from "../../data/selectors";
 
-import { LoadingContainer } from "../../components";
+const Episodes = (state) => {
+  const { fetchEpisodeList, showInfo } = state;
+  const showId = showIdSelector(state);
+  console.log("showId", showId);
 
-const Episode = ({ fetchEpisodeList, showInfo }) => {
-  const { data } = showInfo;
 
   useEffect(() => {
     fetchEpisodeList();
@@ -28,4 +30,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Episode);
+)(Episodes);
