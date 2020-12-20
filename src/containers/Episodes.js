@@ -5,17 +5,19 @@ import { fetchEpisodeList } from "../data/actions"
 
 import { AppWrapper, Episodes } from "../components";
 
-const EpisodesContainer = (state) => {
-  const { fetchEpisodeList, episodeList, showInfo } = state;
-
+const EpisodesContainer = ({ fetchEpisodeList, episodeList, showInfo }) => {
+  console.log("e list: ", episodeList);
   useEffect(() => {
-    fetchEpisodeList(showInfo.data.id);
-  }, [fetchEpisodeList, showInfo]);
+    if (!episodeList) {
+      fetchEpisodeList(showInfo.data.id);
+    }
+  }, [episodeList, fetchEpisodeList, showInfo]);
 
-  return <AppWrapper component={Episodes} {...episodeList} />
+  return <AppWrapper component={Episodes} {...episodeList}/>
 }
 
-const mapStateToProps = (state) => state;
+const mapStateToProps = ({ episodeList, showInfo }) =>
+  ({ episodeList, showInfo });
 
 const mapDispatchToProps = dispatch => {
   return {

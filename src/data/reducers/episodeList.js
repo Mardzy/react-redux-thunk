@@ -2,22 +2,21 @@ import _ from "lodash";
 import {
   FETCH_EPISODE_LIST_FAILED,
   FETCH_EPISODE_LIST_PENDING,
-  FETCH_EPISODE_LIST_SUCCESS
+  FETCH_EPISODE_LIST_SUCCESS,
+  PERSIST_REHYDRATE
 } from "../types";
 
 /**
  * @type {{data: {}, loading: boolean, error: string|null}}
  */
 const initialState = {
-  loading: true,
+  loading: false,
   data: {},
   error: null
 }
 
-const groupEpisodesBySeasons = episodes => {
-  return _.groupBy(episodes, "season")
-
-}
+const groupEpisodesBySeasons = episodes =>
+  _.groupBy(episodes, "season")
 
 /**
  * @param {{data: {}, loading: boolean, error: (string|null)}} state
@@ -33,6 +32,7 @@ export const episodeListReducer = (state = initialState, { type, payload }) => {
         loading: true
       }
     case FETCH_EPISODE_LIST_SUCCESS:
+      console.log("here: ");
       return {
         ...state,
         loading: false,

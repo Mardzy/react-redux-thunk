@@ -7,9 +7,6 @@ import { store } from "../../data/store";
 import { routes } from "../../config"
 const { index :{ name, path }, episodes } = routes
 
-const { showInfo: { data : { name: programName }} } = store.getState();
-console.log("programName: ", programName);
-
 const NavBar = () => (
     <AppBar className="navBar" position="fixed">
       <Toolbar className="navBar-toolBar">
@@ -28,7 +25,6 @@ const NavBar = () => (
             key={episodes.name}
             to={episodes.path}
           />
-          <Typography color="textPrimary">{programName}</Typography>
         </Breadcrumbs>
       </Toolbar>
     </AppBar>

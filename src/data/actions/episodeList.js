@@ -35,6 +35,7 @@ export const fetchEpisodeList = (id) =>
     const path = `${id}/episodes`;
     try {
       dispatch(fetchEpisodeListPending)
+      console.log("", );
       const { data } = await tvMaze.get(path);
 
       dispatch(fetchEpisodeListSuccess(data));

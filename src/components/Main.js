@@ -10,8 +10,8 @@ import {
   Button
 } from "@material-ui/core";
 
-const Main = ({ image, name }) => {
-
+const Main = ({data}) => {
+const { image, name } = data;
   return (
     <Box className="main">
       <Typography variant="h1" component="h3">

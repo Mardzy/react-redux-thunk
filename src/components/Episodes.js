@@ -3,10 +3,16 @@ import React from "react";
 import { Accordion, AccordionDetails, AccordionSummary, Box, Typography } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-const Episodes = (episodes) => {
-
+const Episodes = (props) => {
+  const { data } = props
+  console.log("props: ", props);
+  const { episodes } = data
+  console.log("episodes: ", episodes);
   const renderEpisode = (episode) => (
-    <AccordionDetails key={episode.id}>
+    <AccordionDetails className="episodes-accordion__item" key={episode.id}>
+      <Typography className="episodes-accordion__item-number">
+        {`${episode.number}.`}
+      </Typography>
       <Typography>
         {episode.name}
       </Typography>
@@ -14,7 +20,7 @@ const Episodes = (episodes) => {
   );
 
   const renderSeasons = (seasonEpisodes, seasonNumber) =>
-    <Accordion key={seasonNumber}>
+    <Accordion className="episodes-accordion" key={seasonNumber}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
@@ -28,7 +34,7 @@ const Episodes = (episodes) => {
   return (
     <Box className="episodes">
       <Typography variant="h3">List of Episodes by Season</Typography>
-      {_.map(episodes, (value, key) => renderSeasons(value, key))}
+      {episodes && _.map(episodes, (value, key) => renderSeasons(value, key))}
     </Box>
   );
 }

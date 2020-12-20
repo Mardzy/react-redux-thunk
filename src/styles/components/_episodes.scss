@@ -6,4 +6,11 @@
   h3 {
     margin: 1.7em 0 1.2em;
   }
+
+  .episodes-accordion {
+    width: 40%;
+    .episodes-accordion__item-number {
+      margin-right: 0.3em;
+    }
+  }
 }

@@ -1,7 +1,7 @@
 import {
-  FETCH_SHOW_INFO_FAILED,
-  FETCH_SHOW_INFO_PENDING,
-  FETCH_SHOW_INFO_SUCCESS, PERSIST_REHYDRATE
+  FETCH_EPISODE_FAILED,
+  FETCH_EPISODE_PENDING,
+  FETCH_EPISODE_SUCCESS, PERSIST_REHYDRATE
 } from "../types";
 
 /**
@@ -18,23 +18,23 @@ const initialState = {
  * @param {{type: string, payload: {}}} action
  * @return {{data: {}, loading: boolean, error: {}}}
  */
-export const showInfoReducer = (state = initialState, { type, payload } ) => {
+export const episodeReducer = (state = initialState, { type, payload } ) => {
   console.log("type: ", !!payload, type);
   switch (type) {
-    case FETCH_SHOW_INFO_PENDING:
+    case FETCH_EPISODE_PENDING:
       return {
         loading: true,
         data: {},
         error: null
       };
-    case FETCH_SHOW_INFO_SUCCESS:
+    case FETCH_EPISODE_SUCCESS:
       return {
         ...state,
         loading: false,
         data: payload,
         error: null
       }
-    case FETCH_SHOW_INFO_FAILED:
+    case FETCH_EPISODE_FAILED:
       return {
         ...state,
         loading: false,

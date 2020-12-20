@@ -7,8 +7,11 @@ import { POWER_PUFF_GIRLS_ID } from "../data/constants";
 import { AppWrapper, Main } from "../components";
 
 const MainContainer = ({ fetchShowInfo, showInfo }) => {
+
   useEffect(() => {
-    fetchShowInfo(POWER_PUFF_GIRLS_ID);
+    if(!showInfo.data) {
+      fetchShowInfo(POWER_PUFF_GIRLS_ID);
+    }
   }, [fetchShowInfo]);
 
   return <AppWrapper component={Main} {...showInfo} />;
