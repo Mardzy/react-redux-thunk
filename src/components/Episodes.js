@@ -13,16 +13,16 @@ const Episodes = (episodes) => {
     </AccordionDetails>
   );
 
-  const renderSeasons = (value, key) =>
-    <Accordion key={key}>
+  const renderSeasons = (seasonEpisodes, seasonNumber) =>
+    <Accordion key={seasonNumber}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography variant="h4">Season {key}</Typography>
+        <Typography variant="h5">Season {seasonNumber}</Typography>
       </AccordionSummary>
-      {value.map(episode => renderEpisode(episode))}
+      {seasonEpisodes.map(episode => renderEpisode(episode))}
     </Accordion>
 
   return (

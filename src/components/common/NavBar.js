@@ -3,8 +3,12 @@ import React from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { AppBar, Breadcrumbs, Link, Toolbar, Typography } from "@material-ui/core";
 
+import { store } from "../../data/store";
 import { routes } from "../../config"
 const { index :{ name, path }, episodes } = routes
+
+const { showInfo: { data : { name: programName }} } = store.getState();
+console.log("programName: ", programName);
 
 const NavBar = () => (
     <AppBar className="navBar" position="fixed">
@@ -24,7 +28,7 @@ const NavBar = () => (
             key={episodes.name}
             to={episodes.path}
           />
-          <Typography color="textPrimary">Breadcrumb</Typography>
+          <Typography color="textPrimary">{programName}</Typography>
         </Breadcrumbs>
       </Toolbar>
     </AppBar>
