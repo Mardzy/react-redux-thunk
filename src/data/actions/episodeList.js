@@ -5,7 +5,6 @@ import {
   FETCH_EPISODE_LIST_PENDING,
   FETCH_EPISODE_LIST_SUCCESS
 } from "../types";
-import { POWER_PUFF_GIRLS_ID } from "../constants";
 
 /**
  * @type {{type: string}}
@@ -31,9 +30,9 @@ export const fetchEpisodeListFailed = payload =>
 /**
  * @return {function(*): Promise<void>}
  */
-export const fetchEpisodeList = () =>
+export const fetchEpisodeList = (id) =>
   async dispatch => {
-    const path = `${POWER_PUFF_GIRLS_ID}/episodes`;
+    const path = `${id}/episodes`;
     try {
       dispatch(fetchEpisodeListPending)
       const { data } = await tvMaze.get(path);

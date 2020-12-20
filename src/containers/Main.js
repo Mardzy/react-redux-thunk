@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
-import { fetchShowInfo } from "../../data/actions";
-import { POWER_PUFF_GIRLS_ID } from "../../data/constants";
+import { fetchShowInfo } from "../data/actions";
+import { POWER_PUFF_GIRLS_ID } from "../data/constants";
 
-import { AppWrapper, ShowView } from "../../components";
+import { AppWrapper, Main } from "../components";
 
-const Show = ({ fetchShowInfo, showInfo }) => {
+const MainContainer = ({ fetchShowInfo, showInfo }) => {
   useEffect(() => {
     fetchShowInfo(POWER_PUFF_GIRLS_ID);
   }, [fetchShowInfo]);
 
-  return <AppWrapper component={ShowView} {...showInfo} />;
+  return <AppWrapper component={Main} {...showInfo} />;
 }
 
 const mapStateToProps = ({ showInfo }) =>
@@ -26,4 +26,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Show);
+)(MainContainer);

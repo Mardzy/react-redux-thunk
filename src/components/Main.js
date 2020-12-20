@@ -1,19 +1,19 @@
 import React from "react";
 import {
+  Box,
   Card,
   CardActions,
   CardActionArea,
   CardContent,
   CardMedia,
-  Container,
   Typography,
   Button
 } from "@material-ui/core";
 
-const ShowView = ({ image, name }) => {
+const Main = ({ image, name }) => {
 
   return (
-    <Container className="show">
+    <Box className="main">
       <Typography variant="h1" component="h3">
         {name}
       </Typography>
@@ -43,8 +43,8 @@ const ShowView = ({ image, name }) => {
           </Button>
         </CardActions>
       </Card>
-    </Container>
+    </Box>
   );
 }
 
-export default ShowView;
+export default Main;

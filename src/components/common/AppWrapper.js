@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, CircularProgress, Container, Typography } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 
 import { ErrorBoundary, LoadingContainer } from "../../components";
 

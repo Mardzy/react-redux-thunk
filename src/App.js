@@ -4,10 +4,10 @@ import Routes from "./config/routes";
 
 import { NavBar } from "./components";
 
-const Main = () =>
+const App = () =>
   <main>
     <NavBar />
     <Routes />
   </main>
 
-export default Main;
+export default App;

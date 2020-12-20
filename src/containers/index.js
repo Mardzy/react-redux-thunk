@@ -1,4 +1,4 @@
-import Episodes from "./episodes"
-import Show from "./show"
+import Episodes from "./Episodes"
+import Main from "./Main"
 
-export { Episodes, Show };
+export { Episodes, Main };

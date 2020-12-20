@@ -3,12 +3,12 @@ import { Switch, Route } from "react-router";
 
 import { routes } from "./index";
 
-import { Episodes, Show } from "../containers";
+import { Episodes, Main } from "../containers";
 
 const Router = () =>
   <>
     <Switch>
-      <Route exact path={routes.index.path} component={Show} />
+      <Route exact path={routes.index.path} component={Main} />
       <Route path={routes.episodes.path} component={Episodes} />
     </Switch>
   </>;

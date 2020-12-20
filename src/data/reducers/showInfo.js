@@ -18,8 +18,8 @@ const initialState = {
  * @param {{type: string, payload: {}}} action
  * @return {{data: {}, loading: boolean, error: {}}}
  */
-export const showInfoReducer = (state = initialState, action ) => {
-  switch (action.type) {
+export const showInfoReducer = (state = initialState, { type, payload } ) => {
+  switch (type) {
     case FETCH_SHOW_INFO_PENDING:
       return {
         loading: true,
@@ -27,10 +27,11 @@ export const showInfoReducer = (state = initialState, action ) => {
         error: null
       };
     case FETCH_SHOW_INFO_SUCCESS:
+      console.log("payload", payload);
       return {
         ...state,
         loading: false,
-        data: action.payload,
+        data: payload,
         error: null
       }
     case FETCH_SHOW_INFO_FAILED:
@@ -38,7 +39,7 @@ export const showInfoReducer = (state = initialState, action ) => {
         ...state,
         loading: false,
         data: {},
-        error: action.payload
+        error: payload
       }
     default:
       return state;

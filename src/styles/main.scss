@@ -1,16 +1,19 @@
-@import '_reset',
-  'components/_show',
-  'components/common/_errorBoundary',
-  'components/common/_loadingContainer',
-  'components/common/_navBar';
+@import 'reset',
+  'src/styles/components/main',
+  'src/styles/components/episodes',
+  'components/common/errorBoundary',
+  'components/common/loadingContainer',
+  'components/common/navBar';
 
 html,
 body,
 #root,
 main,
 .appWrapper,
+.episodes,
+.errorBoundary,
 .loadingContainer,
-.errorBoundary {
+.main {
   height: 100%;
   width: 100%;
 }

@@ -6,7 +6,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 
 import { store, persistor } from "./data/store";
 
-import Main from "./main";
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import 'fontsource-roboto';
@@ -15,11 +15,9 @@ import "./styles/main.scss";
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <React.StrictMode>
-        <Router>
-          <Main />
-        </Router>
-      </React.StrictMode>
+      <Router>
+        <App />
+      </Router>
     </PersistGate>
   </Provider>,
   document.getElementById("root")

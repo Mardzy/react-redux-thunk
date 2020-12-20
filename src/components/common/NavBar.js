@@ -24,7 +24,7 @@ const NavBar = () => (
             key={episodes.name}
             to={episodes.path}
           />
-          {/*<Typography color="textPrimary">Breadcrumb</Typography>*/}
+          <Typography color="textPrimary">Breadcrumb</Typography>
         </Breadcrumbs>
       </Toolbar>
     </AppBar>

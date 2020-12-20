@@ -1,13 +1,16 @@
-import AppWrapper from "./common/appWrapper";
-import ErrorBoundary from "./common/errorBoundary";
-import NavBar from "./common/navBar";
-import LoadingContainer from "./common/loadingContainer";
-import ShowView from "./show";
+import AppWrapper from "./common/AppWrapper";
+import ErrorBoundary from "./common/ErrorBoundary";
+import NavBar from "./common/NavBar";
+import LoadingContainer from "./common/LoadingContainer";
+
+import Episodes from "./Episodes";
+import Main from "./Main";
 
 export {
   AppWrapper,
-  LoadingContainer,
+  Episodes,
   ErrorBoundary,
-  NavBar,
-  ShowView
+  LoadingContainer,
+  Main,
+  NavBar
 }
