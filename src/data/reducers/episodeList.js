@@ -32,7 +32,6 @@ export const episodeListReducer = (state = initialState, { type, payload }) => {
         loading: true
       }
     case FETCH_EPISODE_LIST_SUCCESS:
-      console.log("here: ");
       return {
         ...state,
         loading: false,

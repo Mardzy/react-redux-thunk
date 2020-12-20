@@ -1,26 +1,31 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
-import { fetchEpisodeList } from "../data/actions"
+import { fetchEpisode, fetchEpisodeList } from "../data/actions"
 
 import { AppWrapper, Episodes } from "../components";
 
-const EpisodesContainer = ({ fetchEpisodeList, episodeList, showInfo }) => {
-  console.log("e list: ", episodeList);
+const EpisodesContainer = ({ fetchEpisode, fetchEpisodeList, episodeList, showInfo, history }) => {
+  const handleClick = ({ id }) => {
+    fetchEpisode(id);
+    history.push(`/episode/${id}`)
+  }
+
   useEffect(() => {
-    if (!episodeList) {
+    if (!episodeList.data) {
       fetchEpisodeList(showInfo.data.id);
     }
-  }, [episodeList, fetchEpisodeList, showInfo]);
+  }, [episodeList.data, fetchEpisodeList, showInfo.data.id]);
 
-  return <AppWrapper component={Episodes} {...episodeList}/>
+  return <AppWrapper component={Episodes} onClick={(e) => handleClick(e.target.dataset)} {...episodeList}/>
 }
 
-const mapStateToProps = ({ episodeList, showInfo }) =>
-  ({ episodeList, showInfo });
+const mapStateToProps = ({ episode, episodeList, showInfo }) =>
+  ({ episode, episodeList, showInfo });
 
 const mapDispatchToProps = dispatch => {
   return {
+    fetchEpisode: episodeId => dispatch(fetchEpisode(episodeId)),
     fetchEpisodeList: showId => dispatch(fetchEpisodeList(showId))
   }
 }

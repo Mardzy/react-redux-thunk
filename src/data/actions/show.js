@@ -17,9 +17,10 @@ export const fetchShowInfoFailed = payload =>
 
 export const fetchShowInfo = showId =>
   async dispatch => {
-    dispatch(fetchShowInfoPending);
+    const path = `/shows/${showId}`
     try {
-      const { data } = await tvMaze.get(showId);
+    dispatch(fetchShowInfoPending);
+      const { data } = await tvMaze.get(path);
 
       dispatch(fetchShowInfoSuccess(data));
     } catch ({ message }) {

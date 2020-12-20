@@ -19,7 +19,6 @@ const initialState = {
  * @return {{data: {}, loading: boolean, error: {}}}
  */
 export const episodeReducer = (state = initialState, { type, payload } ) => {
-  console.log("type: ", !!payload, type);
   switch (type) {
     case FETCH_EPISODE_PENDING:
       return {

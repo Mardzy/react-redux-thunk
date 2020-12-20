@@ -32,10 +32,9 @@ export const fetchEpisodeListFailed = payload =>
  */
 export const fetchEpisodeList = (id) =>
   async dispatch => {
-    const path = `${id}/episodes`;
+    const path = `/shows/${id}/episodes`;
     try {
       dispatch(fetchEpisodeListPending)
-      console.log("", );
       const { data } = await tvMaze.get(path);
 
       dispatch(fetchEpisodeListSuccess(data));

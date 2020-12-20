@@ -17,9 +17,10 @@ export const fetchEpisodeFailed = payload =>
 
 export const fetchEpisode = showId =>
   async dispatch => {
-    dispatch(fetchEpisodePending);
+    const path = `/episodes/${showId}`
     try {
-      const { data } = await tvMaze.get(showId);
+      dispatch(fetchEpisodePending);
+      const { data } = await tvMaze.get(path);
 
       dispatch(fetchEpisodeSuccess(data));
     } catch ({ message }) {

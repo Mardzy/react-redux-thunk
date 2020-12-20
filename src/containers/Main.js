@@ -9,10 +9,10 @@ import { AppWrapper, Main } from "../components";
 const MainContainer = ({ fetchShowInfo, showInfo }) => {
 
   useEffect(() => {
-    if(!showInfo.data) {
+    if (!showInfo.data) {
       fetchShowInfo(POWER_PUFF_GIRLS_ID);
     }
-  }, [fetchShowInfo]);
+  }, [fetchShowInfo, showInfo.data]);
 
   return <AppWrapper component={Main} {...showInfo} />;
 }

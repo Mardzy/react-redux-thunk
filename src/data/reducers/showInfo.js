@@ -19,7 +19,6 @@ const initialState = {
  * @return {{data: {}, loading: boolean, error: {}}}
  */
 export const showInfoReducer = (state = initialState, { type, payload } ) => {
-  console.log("type: ", !!payload, type);
   switch (type) {
     case FETCH_SHOW_INFO_PENDING:
       return {

@@ -9,6 +9,11 @@
 
   .episodes-accordion {
     width: 40%;
+
+    .episodes-accordion__item-name {
+      cursor: pointer;
+    }
+
     .episodes-accordion__item-number {
       margin-right: 0.3em;
     }
