@@ -1,12 +1,17 @@
 import React from "react";
 import { CircularProgress, Container } from "@material-ui/core";
 
-const LoadingContainer = ({ component: Component, loading, data }) =>
-  <Container>
+import { ErrorBoundary } from "../../components";
+
+const LoadingContainer = ({ component: Component, data, error, loading }) =>
+  <Container className="loadingContainer">
+    {console.log("error: ", error)}
     {
       loading
         ? <CircularProgress/>
-        : <Component {...data} />
+        : error
+          ? <ErrorBoundary error={error} />
+          : <Component {...data} />
     }
 
   </Container>;

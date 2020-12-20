@@ -4,13 +4,9 @@ import { Link as RouterLink } from "react-router-dom";
 import { AppBar, Breadcrumbs, Link, Toolbar, Typography } from "@material-ui/core";
 
 import { routes } from "../../config"
-const { index :{ name, path }, episode } = routes
+const { index :{ name, path }, episodes } = routes
 
 const NavBar = () => {
-  const handleClick = (e) => {
-    e.preventDefault();
-
-  }
 
   return (
     <AppBar className="navBar" position="sticky">
@@ -21,16 +17,14 @@ const NavBar = () => {
               component={RouterLink}
               color="inherit"
               key={name}
-              onClick={handleClick}
               to={path}
             />
           <Link
-            children={_.capitalize(episode.name)}
+            children={_.capitalize(episodes.name)}
             component={RouterLink}
             color="inherit"
-            key={episode.name}
-            onClick={handleClick}
-            to={episode.path}
+            key={episodes.name}
+            to={episodes.path}
           />
           {/*<Typography color="textPrimary">Breadcrumb</Typography>*/}
         </Breadcrumbs>

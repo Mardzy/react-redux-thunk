@@ -9,11 +9,11 @@ import { LoadingContainer, ShowView } from "../../components";
 const Show = (props) => {
   const { fetchEpisodeList, fetchShowInfo, episodeList, showInfo } = props;
   useEffect(() => {
-    fetchShowInfo(POWER_PUFF_GIRLS_ID);
+    fetchShowInfo(POWER_PUFF_GIRLS_ID+99999);
     fetchEpisodeList();
   }, [fetchEpisodeList, fetchShowInfo]);
 
-  return <LoadingContainer component={ShowView} {...showInfo} />
+  return <LoadingContainer component={ShowView} {...showInfo} />;
 }
 
 const mapStateToProps = (state) => {

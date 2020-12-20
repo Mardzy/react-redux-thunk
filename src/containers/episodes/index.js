@@ -11,6 +11,7 @@ const Episode = ({ fetchEpisodeList, showInfo }) => {
   useEffect(() => {
     fetchEpisodeList();
   }, [fetchEpisodeList]);
+
   return <div>episode</div>
   // return <LoadingContainer component="I'm an episode" {...showInfo} />
 }

@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 
 import store from "./data/store";
 
-import App from "./App";
+import Main from "./main";
 import reportWebVitals from "./reportWebVitals";
 
 import 'fontsource-roboto';
@@ -15,7 +15,7 @@ ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
       <Router>
-        <App />
+        <Main />
       </Router>
     </React.StrictMode>
   </Provider>,

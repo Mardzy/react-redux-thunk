@@ -8,10 +8,11 @@ import {
 import { POWER_PUFF_GIRLS_ID } from "../../constants";
 
 /**
- * @return {{type: string}}
+ * @type {{type: string}}
  */
-export const fetchEpisodeListPending = () =>
-  ({ type: FETCH_EPISODE_LIST_PENDING })
+export const fetchEpisodeListPending = {
+  type: FETCH_EPISODE_LIST_PENDING
+};
 
 /**
  * @param payload

@@ -1,3 +1,14 @@
 @import '_reset',
   'components/_show',
+  'components/common/_errorBoundary',
   'components/common/_navBar';
+
+html,
+body,
+#root,
+main,
+.loadingContainer,
+.errorBoundary {
+  height: 100%;
+  width: 100%;
+}

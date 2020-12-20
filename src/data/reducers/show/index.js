@@ -11,7 +11,7 @@ const initialState = {
   loading: true,
   data: {},
   error: null
-}
+};
 
 /**
  * @param {{data: {}, loading: boolean, error: (string|null)}} state
@@ -19,9 +19,15 @@ const initialState = {
  * @return {{data: {}, loading: boolean, error: {}}}
  */
 export const showInfoReducer = (state = initialState, action ) => {
+  console.log("type: ", action.type);
   switch (action.type) {
     case FETCH_SHOW_INFO_PENDING:
-      return initialState;
+      console.log("reducer pending: ");
+      return {
+        loading: true,
+        data: {},
+        error: null
+      };
     case FETCH_SHOW_INFO_SUCCESS:
       return {
         ...state,

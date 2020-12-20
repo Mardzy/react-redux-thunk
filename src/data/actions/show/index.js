@@ -5,8 +5,9 @@ import {
   FETCH_SHOW_INFO_SUCCESS
 } from "../../types";
 
-export const fetchShowInfoPending = () =>
-  ({ type: FETCH_SHOW_INFO_PENDING })
+export const fetchShowInfoPending = {
+  type: FETCH_SHOW_INFO_PENDING
+}
 
 export const fetchShowInfoSuccess = payload =>
   ({ type: FETCH_SHOW_INFO_SUCCESS, payload })
@@ -16,13 +17,13 @@ export const fetchShowInfoFailed = payload =>
 
 export const fetchShowInfo = showId =>
   async dispatch => {
+    dispatch(fetchShowInfoPending);
     try {
-      dispatch(fetchShowInfoPending)
       const { data } = await tvMaze.get(showId);
 
       dispatch(fetchShowInfoSuccess(data));
+    } catch ({ message }) {
+      dispatch(fetchShowInfoFailed(message));
     }
-    catch ({ message }) {
-      dispatch(fetchShowInfoFailed(message))
-    }
-};
+  };
+
