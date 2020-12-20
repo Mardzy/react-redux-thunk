@@ -1,9 +1,8 @@
 import _ from "lodash";
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { AppBar, Breadcrumbs, Link, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Breadcrumbs, Link, Toolbar } from "@material-ui/core";
 
-import { store } from "../../data/store";
 import { routes } from "../../config"
 const { index :{ name, path }, episodes } = routes
 
@@ -15,14 +14,12 @@ const NavBar = () => (
               children={_.capitalize(name)}
               component={RouterLink}
               color="inherit"
-              key={name}
               to={path}
             />
           <Link
             children={_.capitalize(episodes.name)}
             component={RouterLink}
             color="inherit"
-            key={episodes.name}
             to={episodes.path}
           />
         </Breadcrumbs>

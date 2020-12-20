@@ -10,7 +10,7 @@ const Router = () =>
     <Switch>
       <Route exact path={routes.index.path} component={Main} />
       <Route path={routes.episodes.path} component={Episodes} />
-      <Route exact path={routes.episode.path} component={Episode} />
+      <Route path={routes.episode.path} component={Episode} />
     </Switch>
   </>;
 
