@@ -4,7 +4,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { AppBar, Breadcrumbs, Link, Toolbar } from "@material-ui/core";
 
 import { routes } from "../../config"
-const { index :{ name, path }, episodes } = routes
+const { index :{ name, path } } = routes
 
 const NavBar = () => (
     <AppBar className="navBar" position="fixed">
@@ -16,12 +16,6 @@ const NavBar = () => (
               color="inherit"
               to={path}
             />
-          <Link
-            children={_.capitalize(episodes.name)}
-            component={RouterLink}
-            color="inherit"
-            to={episodes.path}
-          />
         </Breadcrumbs>
       </Toolbar>
     </AppBar>

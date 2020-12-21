@@ -4,28 +4,37 @@ import {
   Typography
 } from "@material-ui/core";
 
+import { ComponentWrapper, Episodes } from "./index";
+
 import { createMarkup } from "../utils";
 
-const Main = ({ data : { image, name, officialSite, rating, summary } }) => (
-  <Box className="main">
-    <Typography className="main-header" variant="h3">
-      {name}
-    </Typography>
-    <Box className="main-content">
+const Main = ({ showInfo, episodeList, onClick }) => {
 
-      <img src={image.original} alt={name}/>
-      <Box className="main-content__text">
-        <Typography dangerouslySetInnerHTML={createMarkup(summary)} />
-        <Typography variant="body2">
-          Rating: {rating.average}
-        </Typography>
-        <Link variant="subtitle1" href={officialSite} target="_blank">
-          Official Site
-        </Link>
+  const MainComponent = ({ data: { image, name, officialSite, rating, summary } }) => (
+    <Box className="main">
+      <Typography className="main-header" variant="h3">
+        {name}
+      </Typography>
+      <Box className="main-content">
+        <Box className="main-content__image">
+          <img src={image.original} alt={name}/>
+        </Box>
+        <Box className="main-content__text">
+          <Typography dangerouslySetInnerHTML={createMarkup(summary)}/>
+          <Typography variant="body2">
+            Rating: {rating.average}
+          </Typography>
+          <Link variant="subtitle1" href={officialSite} target="_blank">
+            Official Site
+          </Link>
+          <ComponentWrapper component={Episodes} onClick={onClick} {...episodeList} />
+        </Box>
       </Box>
     </Box>
-  </Box>
-);
+  );
+
+  return <ComponentWrapper component={MainComponent} {...showInfo} />;
+};
 
 
 export default Main;

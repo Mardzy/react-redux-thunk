@@ -12,7 +12,7 @@ import { ErrorBoundary, LoadingContainer } from "../../components";
  * @return {JSX.Element}
  * @constructor
  */
-const AppWrapper = ({ component: Component, data, error, loading, onClick = () => {}}) =>
+const ComponentWrapper = ({ component: Component, data, error, loading, onClick = () => {}}) =>
   <Container className="appWrapper" display="flex">
     {
       loading
@@ -23,4 +23,4 @@ const AppWrapper = ({ component: Component, data, error, loading, onClick = () =
     }
   </Container>;
 
-export default AppWrapper;
+export default ComponentWrapper;
