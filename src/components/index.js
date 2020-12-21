@@ -1,18 +1,18 @@
-import ComponentWrapper from "./common/ComponentWrapper";
+import Wrapper from "./common/Wrapper";
 import ErrorBoundary from "./common/ErrorBoundary";
 import NavBar from "./common/NavBar";
-import LoadingContainer from "./common/LoadingContainer";
+import Loading from "./common/Loading";
 
 import Episode from "./Episode";
 import Episodes from "./Episodes";
 import Main from "./Main";
 
 export {
-  ComponentWrapper,
+  Wrapper,
   Episode,
   Episodes,
   ErrorBoundary,
-  LoadingContainer,
+  Loading,
   Main,
   NavBar
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { ComponentWrapper, Episode } from "../components";
+import { Wrapper, Episode } from "../components";
 
 const EpisodeContainer = ({ episode }) =>
-  <ComponentWrapper component={Episode} {...episode} />;
+  <Wrapper component={Episode} {...episode} />;
 
 const mapStateToProps = ({ episode }) =>
   ({ episode });

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "@material-ui/core";
 
-import { ErrorBoundary, LoadingContainer } from "../../components";
+import { ErrorBoundary, Loading } from "../../components";
 
 /**
  * @param {JSX.Element} Component
@@ -12,15 +12,15 @@ import { ErrorBoundary, LoadingContainer } from "../../components";
  * @return {JSX.Element}
  * @constructor
  */
-const ComponentWrapper = ({ component: Component, data, error, loading, onClick = () => {}}) =>
+const Wrapper = ({ component: Component, data, error, loading, onClick = () => {}}) =>
   <Container className="appWrapper" display="flex">
     {
       loading
-        ? <LoadingContainer />
+        ? <Loading />
         : error
           ? <ErrorBoundary error={error} />
           : <Component data={data} onClick={onClick} />
     }
   </Container>;
 
-export default ComponentWrapper;
+export default Wrapper;

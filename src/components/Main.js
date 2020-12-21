@@ -4,7 +4,7 @@ import {
   Typography
 } from "@material-ui/core";
 
-import { ComponentWrapper, Episodes } from "./index";
+import { Wrapper, Episodes } from "./index";
 
 import { createMarkup } from "../utils";
 
@@ -27,13 +27,13 @@ const Main = ({ showInfo, episodeList, onClick }) => {
           <Link variant="subtitle1" href={officialSite} target="_blank">
             Official Site
           </Link>
-          <ComponentWrapper component={Episodes} onClick={onClick} {...episodeList} />
+          <Wrapper component={Episodes} onClick={onClick} {...episodeList} />
         </Box>
       </Box>
     </Box>
   );
 
-  return <ComponentWrapper component={MainComponent} {...showInfo} />;
+  return <Wrapper component={MainComponent} {...showInfo} />;
 };
 
 
