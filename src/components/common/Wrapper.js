@@ -1,3 +1,4 @@
+import _ from "lodash"
 import React from "react";
 import { Container } from "@material-ui/core";
 
@@ -19,7 +20,7 @@ const Wrapper = ({ component: Component, data, error, loading, onClick = () => {
         ? <Loading />
         : error
           ? <ErrorBoundary error={error} />
-          : <Component data={data} onClick={onClick} />
+          : _.isEmpty(data) || <Component data={data} onClick={onClick} />
     }
   </Container>;
 

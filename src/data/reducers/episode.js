@@ -8,7 +8,7 @@ import {
  * @type {{data: {}, loading: boolean, error: string|null}}
  */
 const initialState = {
-  loading: true,
+  loading: false,
   data: {},
   error: null
 };

@@ -8,6 +8,14 @@ import { Wrapper, Episodes } from "./index";
 
 import { createMarkup } from "../utils";
 
+/**
+ * @todo backup image
+ * @param showInfo
+ * @param episodeList
+ * @param onClick
+ * @return {JSX.Element}
+ * @constructor
+ */
 const Main = ({ showInfo, episodeList, onClick }) => {
 
   const MainComponent = ({ data: { image, name, officialSite, rating, summary } }) => (
@@ -17,7 +25,7 @@ const Main = ({ showInfo, episodeList, onClick }) => {
       </Typography>
       <Box className="main-content">
         <Box className="main-content__image">
-          <img src={image.original} alt={name}/>
+          {image && <img src={image.original} alt={name}/>}
         </Box>
         <Box className="main-content__text">
           <Typography dangerouslySetInnerHTML={createMarkup(summary)}/>

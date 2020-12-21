@@ -3,6 +3,18 @@ import { Box, Typography } from "@material-ui/core";
 
 import { createMarkup } from "../utils";
 
+/**
+ * @todo backup image| user feedback
+ * @param airdate
+ * @param image
+ * @param name
+ * @param number
+ * @param runtime
+ * @param season
+ * @param summary
+ * @return {JSX.Element}
+ * @constructor
+ */
 const Episode = ({ data : { airdate, image, name, number, runtime, season, summary } }) => (
   <Box className="episode">
     <Box className="episode-header">

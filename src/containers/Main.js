@@ -18,16 +18,16 @@ const MainContainer = (state) => {
   } = state
 
   useEffect(() => {
-    if (!showInfo.data) {
+    if (_.isEmpty(showInfo.data)) {
       fetchShowInfo(POWER_PUFF_GIRLS_ID);
     }
-  }, [fetchShowInfo, showInfo.data]);
+  }, []);
 
   useEffect(() => {
-    if (!episodeList.data) {
+    if (_.isEmpty(episodeList.data) && showInfo.data.id) {
       fetchEpisodeList(showInfo.data.id);
     }
-  }, [episodeList.data, fetchEpisodeList, showInfo.data.id]);
+  }, []);
 
   const handleClick = ({ id }) => {
     fetchEpisode(id);
